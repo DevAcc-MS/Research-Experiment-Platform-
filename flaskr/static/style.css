@@ -1,0 +1,23 @@
+ul {
+    margin: 0 3rem;
+}
+
+a#brand {
+    margin: 0 3rem;
+}
+
+input#exampleInputEmail1 {
+    width: 20% !important;
+}
+
+iframe {
+    display: flex;
+    border-style:none;
+}
+
+div#vid, iframe {
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    background-color: #777;
+}
