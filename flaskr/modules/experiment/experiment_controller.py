@@ -50,6 +50,9 @@ def activeMode(pId):
 def testPhase():
     return render_template("experiment/testPhase.html")
 
+@experiment_bp.route("/selfreportQ", methods=['POST', 'GET'])
+def selfreportQ():
+    return render_template("experiment/selfreportQ.html")
 
 @experiment_bp.route("/thankyou")
 def thankyou():
