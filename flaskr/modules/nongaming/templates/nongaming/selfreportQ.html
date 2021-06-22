@@ -1,4 +1,4 @@
-{% extends "experiment/layout.html" %}
+{% extends "nongaming/layout.html" %}
 {% block head %}
   {{ super() }}
 {% endblock %}
@@ -21,21 +21,11 @@
         </ul>
 
         <br><br>
-        Please email the following to <b> sharique.mohd@research.iiit.ac.in </b>:
-        <ol>
-            <li> Sketch Map Image </li> 
-            <li> Zipped Folder containing experiment data (based on your device's operating system) </li>
-                <ul> 
-                    <li> <b><u>Linux</u></b>: folder name is "DefaultCompany" located at: <b>~/.config/unity3d/</b> </li>
-                    <li> <b><u>Windows</u></b>: folder name is "DefaultCompany" located at: <b>%USERPROFILE%\AppData\LocalLow\</b> </li>
-                </ul>
-        </ol>
-        <br><br>
        
     </div>
   </div>
   
-  <form action="/experiment/thankyou">
+  <form action="/nongaming/thankyou">
   <button name ="next" class="btn btn-primary" style="margin: 0 auto; display: block;" type="submit">
     Proceed
   </button>

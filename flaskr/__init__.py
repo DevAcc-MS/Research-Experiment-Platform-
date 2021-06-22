@@ -22,12 +22,15 @@ app.register_blueprint(admin_bp, url_prefix='/admin')
 from flaskr.modules.map_plot import map_plot_bp
 app.register_blueprint(map_plot_bp, url_prefix='/map_plot')
 
-from flaskr.modules.experiment import experiment_bp
-app.register_blueprint(experiment_bp, url_prefix='/experiment')
+from flaskr.modules.nongaming import nongaming_bp
+app.register_blueprint(nongaming_bp, url_prefix='/nongaming')
+
+from flaskr.modules.gaming import gaming_bp
+app.register_blueprint(gaming_bp, url_prefix='/gaming')
 
 @app.route("/")
 def hello_world():
-    return redirect(url_for('experiment_bp.index'))
+    return redirect(url_for('nongaming_bp.index'))
 
 @app.cli.command("resetdb")
 def reset_db():

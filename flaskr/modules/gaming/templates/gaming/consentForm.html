@@ -1,4 +1,4 @@
-{% extends "experiment/layout.html" %}
+{% extends "gaming/layout.html" %}
 {% block head %}
   {{ super() }}
 {% endblock %}
@@ -14,21 +14,23 @@
         
           <p>Your participation in this experiment is entirely voluntary. You may refuse to complete the experiment at any point. You may also stop at any time. However, for the benefit of the study, we would request you to participate till the end. The experiment is fun and will take approximately half an hour only. 
 
-            <br><br>There are no anticipated risks in participation. 
+            <br><br>There are no anticipated risks in participation. Your participation is anonymous. Your data will be stored with unique anonymous User ID. The data will be accessible only to those working on the project.
+
+            <br><br> Your Participant Id (PID) is: <b style="font-family: 'Mate SC', serif; font-size: 20px;">{{ pId }} </b>
             
-            <br><br>Your participation is anonymous. Your data will be stored with unique anonymous User ID. The data will be accessible only to those working on the project.
+            <br><br> <b>Please make sure that you have stable internet connection.</b>
             
-            <br><br>Please click on the following button to give your consent and continue with the experiment. 
+            <br><br> I have read the above information carefully and hereby voluntarily agree to participate in this experiment. </p>
+
             
-            <br><br>I have read the above information carefully and hereby voluntarily agree to participate in this experiment. </p>
       </div>
     </div>
   
-  <form action="/experiment/participantVideo" method="POST">
-    <div style="display: flex; justify-content: center; margin-bottom: 20px; align-items: center;">
+  <form action="/gaming/reminder" method="POST">
+    <!-- <div style="display: flex; justify-content: center; margin-bottom: 20px; align-items: center;">
         <label for="participantId" style="margin-right: 20px;"> Participant ID</label>
         <input type="text" name="participantId" placeholder="Enter your Participant ID" required>
-    </div>
+    </div> -->
     <button name ="next" class="btn btn-primary" style="margin: 0 auto; display: block;" type="submit">
         I agree
     </button>

@@ -19,3 +19,34 @@ class ActivePassiveVideo(db.Model):
         self.ytURL = ytURL
         self.activeDone = activeDone
         self.passiveDone = passiveDone
+
+
+# (id, image, zipfile)
+class Gaming(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    pId = db.Column(db.Integer, unique=True)
+    imageName = db.Column(db.String(300))
+    zipFileName = db.Column(db.String(300))
+    
+    def __repr__(self):
+        return 'pId = {0}, imageName = {1}, zipFileName = {2}'.format(str(self.pId), self.imageName, self.zipFileName)
+
+    def __init__(self, pId, imageName, zipFileName):
+        self.pId = pId
+        self.imageName = imageName
+        self.zipFileName = zipFileName
+
+class NonGaming(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    pId = db.Column(db.Integer, unique=True)
+    imageName = db.Column(db.String(300))
+    zipFileName = db.Column(db.String(300))
+    
+    def __repr__(self):
+        return 'pId = {0}, imageName = {1}, zipFileName = {2}'.format(str(self.pId), self.imageName, self.zipFileName)
+
+    def __init__(self, pId, imageName, zipFileName):
+        self.pId = pId
+        self.imageName = imageName
+        self.zipFileName = zipFileName
+    

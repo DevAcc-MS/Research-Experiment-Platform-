@@ -1,0 +1,44 @@
+{% extends "nongaming/layout.html" %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+
+
+{% block mainbody %} 
+  <div style="display: flex; align-items: center; flex-direction: column; flex-wrap: wrap; margin-left: 20%; margin-right: 20%; margin-bottom: 20px;">
+      <div style="margin-top: 50px; font-family: 'Mate SC', serif; font-size: 50px;">
+        <h1> Consent Form </h1>
+      </div>
+      <div style="margin-top: 50px; font-family: 'Montserrat', sans-serif; font-size: 20px;">
+        
+        <p>Your participation in this experiment is entirely voluntary. You may refuse to complete the experiment at any point. You may also stop at any time. However, for the benefit of the study, we would request you to participate till the end. The experiment is fun and will take approximately half an hour only. 
+
+          <br><br>There are no anticipated risks in participation. Your participation is anonymous. Your data will be stored with unique anonymous User ID. The data will be accessible only to those working on the project.
+
+          <br><br> Your Participant Id (PID) is: <b style="font-family: 'Mate SC', serif; font-size: 20px;">{{ pId }} </b>
+          
+          <br><br> <b>Please make sure that you have stable internet connection.</b>
+          
+          <br><br> I have read the above information carefully and hereby voluntarily agree to participate in this experiment. </p>
+            
+      </div>
+    </div>
+  
+  <form action="/nongaming/reminder" method="POST">
+    <!-- <div style="display: flex; justify-content: center; margin-bottom: 20px; align-items: center;">
+        <label for="participantId" style="margin-right: 20px;"> Participant ID</label>
+        <input type="text" name="participantId" placeholder="Enter your Participant ID" required>
+    </div> -->
+    <button name ="next" class="btn btn-primary" style="margin: 0 auto; display: block;" type="submit">
+        I agree
+    </button>
+  </form>
+
+{% endblock %}
+
+{% block scripts %} 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+{% endblock %}
