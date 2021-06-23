@@ -95,7 +95,7 @@ def fileUpload():
 
         if image == None or zipFile == None or imageName == '' or zipFileName == '':
             print('Upload file missing')
-            return redirect(request.url_root)
+            return redirect('/nongaming/fileUpload')
 
         Id = getId()
         imageName = 'NG' + str(Id) + '_' + imageName
@@ -124,7 +124,8 @@ def fileUpload():
 
 @nongaming_bp.route("/selfreportQ", methods=['POST', 'GET'])
 def selfreportQ():
-    return render_template("nongaming/selfreportQ.html")
+    pId = 'NG' + str(getId())
+    return render_template("nongaming/selfreportQ.html", pId=pId)
 
 @nongaming_bp.route("/thankyou")
 def thankyou():
