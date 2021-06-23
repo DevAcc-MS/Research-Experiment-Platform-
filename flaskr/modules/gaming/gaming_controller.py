@@ -92,7 +92,7 @@ def fileUpload():
 
         if image == None or zipFile == None or imageName == '' or zipFileName == '':
             print('Upload file missing')
-            return redirect(request.url_root)
+            return redirect('/gaming/fileUpload')
 
         Id = getId()
         imageName = 'G' + str(Id) + '_' + imageName
