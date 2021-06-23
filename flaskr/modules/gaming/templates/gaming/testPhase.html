@@ -12,57 +12,58 @@
         </div>
         <div style="margin-top: 50px; font-family: 'Montserrat', sans-serif; font-size: 20px;">
         
-            <p>There would be 20 tasks in the test phase. In each task you will be taken to a start object position and will be asked to locate the ‘instructed’ target object, followed by virtually walking to the target object. </p>
-            <p> The information of start & target object, & other instructions would be displayed on screen as shown below: </p>
+          <p>There would be 20 tasks in the test phase. In each task you will be taken to a source object position and will be asked to locate the ‘instructed’ destination object, followed by virtually walking to the destination object. </p>
+          <p> The information of source & 'instructed' destination object, & other instructions would be displayed on screen as shown below: </p>
         </div>
     </div>
+    
     <div class="container">
-        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active" data-bs-interval="10000">
-                <img src="{{ url_for('static', filename='img/Screen_1.png') }}" class="d-block w-100" alt="Screen1">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Landing screen</h5>
-                  <p>A landing screen similar to this will be present for each task. Press R when you are ready</p>
-                </div>
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="{{ url_for('static', filename='img/Screen_2.png') }}" class="d-block w-100" alt="Screen2">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Orientation</h5>
-                  <p>After pressing R, walls & source object will appear for few seconds to help you orient according to surrounding</p>
-                </div>
-              </div>
-              <div class="carousel-item" data-bs-interval="2000">
-                <img src="{{ url_for('static', filename='img/Screen_3.png') }}" class="d-block w-100" alt="Screen3">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Pointing Task</h5>
-                  <p>Once the walls disappear, press T to point towards the target object's location</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <img src="{{ url_for('static', filename='img/Screen_4.png') }}" class="d-block w-100" alt="Screen4">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Walk to Target Object</h5>
-                  <p>Now, move to the location of target object and press 'C' </p>
-                </div>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="{{ url_for('static', filename='img/Screen_1.png') }}" class="d-block w-100" alt="Screen1">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+                <p><b>In each task, you'll be instructed to point from source object (here, it's Gear) towards a destination object (here, it's Earth). You'll be then asked to virtually walk to its location. When you are ready press R.</b></p>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="{{ url_for('static', filename='img/Screen_2.png') }}" class="d-block w-100" alt="Screen2">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+                <p><b>You'll have 10 seconds to orient yourself in the virtual environment, after which walls & objects will disappear. </b></p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <img src="{{ url_for('static', filename='img/Screen_3.png') }}" class="d-block w-100" alt="Screen3">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+                <p><b>Now orient yourself towards the location of destination object (here Snowman), and then Press T to register the pointing direction </b></p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="{{ url_for('static', filename='img/Screen_4.png') }}" class="d-block w-100" alt="Screen4">
+              <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+                <p><b>Now, walk towards the destination object's (here, Snowman) location. Once you think you have reached its location, press 'C' </b></p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+      </div>
     </div>
     <div style="display: flex; align-items: center; flex-direction: column; flex-wrap: wrap; margin-left: 20%; margin-right: 20%; margin-bottom: 20px;">
         <div style="margin-top: 50px; font-family: 'Mate SC', serif; font-size: 50px;">
@@ -71,6 +72,7 @@
         <div style="margin-top: 0.8rem; font-family: 'Montserrat', sans-serif; font-size: 20px;">
             Sample test tasks: Run the file below to perform some test tasks for practise. &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; 
             &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  <br>
+            <b>NOTE</b>: For Windows platform, run <u> Chrastil_Test.exe</u>. For Linux, run <u>ChrastilTestLinux.x86_64</u> (first you'll need to run following command in terminal: chmod +x ChrastilTestLinux.x86_64) <br><br>
             
             Download: <a href="https://iiitaphyd-my.sharepoint.com/:u:/g/personal/sharique_mohd_research_iiit_ac_in/EZY3Bdvt_YtIjUF8_3rJDbYBQeiCXUgzTO4UNZwWQ7w5IA?e=Xl3BIY">Windows</a> &nbsp; &nbsp; 
             <a href="https://iiitaphyd-my.sharepoint.com/:u:/g/personal/sharique_mohd_research_iiit_ac_in/ESA3EM4aTe9DgqccbSyZv9IBYpwWlM8ea15NQj_KDWQy1A?e=kwafeM">Linux</a>
