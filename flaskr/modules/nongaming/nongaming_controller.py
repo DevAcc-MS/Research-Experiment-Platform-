@@ -124,7 +124,7 @@ def fileUpload():
 
 @nongaming_bp.route("/selfreportQ", methods=['POST', 'GET'])
 def selfreportQ():
-    pId = 'NG' + str(getId())
+    pId = 'NG' + str(getId() - 1)
     return render_template("nongaming/selfreportQ.html", pId=pId)
 
 @nongaming_bp.route("/thankyou")
