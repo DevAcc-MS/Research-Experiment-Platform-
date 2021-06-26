@@ -74,7 +74,8 @@ def testPhase():
 
 @gaming_bp.route("/testPhase2", methods=['POST', 'GET'])
 def testPhase2():
-    return render_template("gaming/testPhase2.html")
+    pId = 'G' + str(getId())
+    return render_template("gaming/testPhase2.html", pId=pId)
 
 @gaming_bp.route("/fileUpload", methods=['POST', 'GET'])
 def fileUpload():

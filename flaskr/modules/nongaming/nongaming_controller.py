@@ -76,7 +76,8 @@ def testPhase():
 
 @nongaming_bp.route("/testPhase2", methods=['POST', 'GET'])
 def testPhase2():
-    return render_template("nongaming/testPhase2.html")
+    pId = 'NG' + str(getId())
+    return render_template("nongaming/testPhase2.html", pId=pId)
 
 
 @nongaming_bp.route("/fileUpload", methods=['POST', 'GET'])
