@@ -12,59 +12,32 @@
         </div>
         <div style="margin-top: 50px; font-family: 'Montserrat', sans-serif; font-size: 20px;">
         
-            <p>There would be 20 tasks in the test phase. In each task you will be taken to a source object position and will be asked to locate the ‘instructed’ destination object, followed by virtually walking to the destination object. </p>
-            <p> The information of source & 'instructed' destination object, & other instructions would be displayed on screen as shown below: </p>
+          <p>There would be 18 tasks in the test phase. In each task you will be taken to a source object position and will be asked to locate the ‘instructed’ destination object, followed by virtually walking to the destination object. </p>
+          <p> The information of source & 'instructed' destination object, & other instructions would be displayed on screen as shown below: </p>
+          
+          <p>
+            <b> 
+              1)</b> Each trial will begin with blank layout with an instruction for source target and goal target.
+              The source object (here, Gear) is where you will be taken in virtual environment. You will be standing facing the source object (here, Gear). From there, you will be expected to locate the goal target (here, Earth) that will be instructed to you before every trial.
+            
+            <img src="{{ url_for('static', filename='img/Screen_1.png') }}" class="d-block w-100"> <br><br>
+
+            <b> 2)
+            </b> You will be given 10 seconds to orient yourself towards goal target and prepare yourself to point to it. After 10 seconds the wall and objects will disappear and you will be presented with blank layout
+            <img src="{{ url_for('static', filename='img/Screen_2.png') }}" class="d-block w-100"> <br><br>
+            
+            <b> 3)
+            </b> Here you will be expected to use crossahair ('+' sign in the centre of the screen) to locate the goal target in the given virtual space. Once you think you have located the goal target, press left-click mouse button to register your response
+            <img src="{{ url_for('static', filename='img/Screen_3.png') }}" class="d-block w-100"> <br><br>
+            
+            <b> 4)
+            </b> 
+            After pointing the goal target, you will be expected to virtual reach to the target object by pressing arrow keys. Once you think you have reached the target object, Press ENTER to register your response.
+            <img src="{{ url_for('static', filename='img/Screen_3.png') }}" class="d-block w-100">
+          </p>
         </div>
     </div>
-    <div class="container">
-      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <img src="{{ url_for('static', filename='img/Screen_1.png') }}" class="d-block w-100" alt="Screen1">
-              <div class="carousel-caption d-none d-md-block">
-                <h5></h5>
-                <p><b> Each trial will begin with blank layout with an instruction for source target and goal target.
-                  The source object (here, Gear) is where you will be taken in virtual environment. You will be standing facing the source object (here, Gear). From there, you will be expected to locate the goal target (here, Earth) that will be instructed to you before every trial.</b></p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="10000">
-              <img src="{{ url_for('static', filename='img/Screen_2.png') }}" class="d-block w-100" alt="Screen2">
-              <div class="carousel-caption d-none d-md-block">
-                <h5></h5>
-                <p><b>You will be given 10 seconds to orient yourself towards goal target and prepare yourself to point to it. After 10 seconds the wall and objects will disappear and you will be presented with blank layout </b></p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="10000">
-              <img src="{{ url_for('static', filename='img/Screen_3.png') }}" class="d-block w-100" alt="Screen3">
-              <div class="carousel-caption d-none d-md-block">
-                <h5></h5>
-                <p><b>Here you will be expected to use crossahair ('+' sign in the centre of the screen) to locate the goal target in the given virtual space. Once you think you have located the goal target, press left-click mouse button to register your response</b></p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img src="{{ url_for('static', filename='img/Screen_4.png') }}" class="d-block w-100" alt="Screen4">
-              <div class="carousel-caption d-none d-md-block">
-                <h5></h5>
-                <p><b>After pointing the goal target, you will be expected to virtual reach to the target object by pressing arrow keys. Once you think you have reached the target object, Press ENTER to register your response. </b></p>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-    </div>
+    
     <div style="display: flex; align-items: center; flex-direction: column; flex-wrap: wrap; margin-left: 20%; margin-right: 20%; margin-bottom: 20px;">
         <div style="margin-top: 50px; font-family: 'Mate SC', serif; font-size: 50px;">
             <h2> Sample test tasks </h2>
@@ -74,8 +47,8 @@
             &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;  <br>
             <b>NOTE</b>: For Windows platform, run <u> Chrastil_Test.exe</u>. For Linux, run <u>ChrastilTestLinux.x86_64</u> (first you'll need to run following command in terminal: chmod +x ChrastilTestLinux.x86_64) <br><br>
      
-            Download: <a href="https://iiitaphyd-my.sharepoint.com/:u:/g/personal/sharique_mohd_research_iiit_ac_in/EXQ0jwKU1zBHvlHQmK4eEpMBwrTg2DplqMSQ7gw9axkn0w?e=cQ3lvp">Windows</a> &nbsp; &nbsp; 
-            <a href="https://iiitaphyd-my.sharepoint.com/:u:/g/personal/sharique_mohd_research_iiit_ac_in/EbaPA5B-l_NEmh5O4AJ21JoBAGhPVWMg_l-tLfFUTg5qJg?e=0y254I">Linux</a>
+            Download: <a href="https://iiitaphyd-my.sharepoint.com/:f:/g/personal/sharique_mohd_research_iiit_ac_in/Em4Ehy6geWNKrxwJv2P2uOkB0RgHTWzwBJmxsxCTRfNHSg?e=Tkqwl7">Windows</a> &nbsp; &nbsp; 
+            <a href="https://iiitaphyd-my.sharepoint.com/:f:/g/personal/sharique_mohd_research_iiit_ac_in/Evoaa_7X4LNDix_ZOFk-nJ8BCO-h9b-JnkLEamkR8GLi9Q?e=Ark11u">Linux</a>
         </div>
     </div>
 
