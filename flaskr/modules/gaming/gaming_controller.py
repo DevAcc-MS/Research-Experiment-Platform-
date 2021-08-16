@@ -126,7 +126,7 @@ def fileUpload():
 
 @gaming_bp.route("/selfreportQ", methods=['POST', 'GET'])
 def selfreportQ():
-    pId = 'G' + str(getId() - 1)
+    pId = 'G' + str(getId() - 2)
     return render_template("gaming/selfreportQ.html", pId=pId)
 
 @gaming_bp.route("/thankyou")
