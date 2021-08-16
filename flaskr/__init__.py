@@ -3,7 +3,7 @@ from flask.helpers import url_for
 from flask.templating import render_template
 from flask_sqlalchemy import SQLAlchemy
 
-from flaskr.models import ActivePassiveVideo
+from flaskr.models import ActivePassiveVideo, Gaming, NonGaming
 from flaskr.modules import admin
 
 app = Flask(__name__)
@@ -41,4 +41,32 @@ def reset_db():
 def addDummyUser():
     temp = ActivePassiveVideo('A01', 'P01', 'https://www.youtube.com/embed/tgbNymZ7vqY', False, False)
     db.session.add(temp)
+    db.session.commit()
+
+
+@app.cli.command("showAllData")
+def showAllData():
+    print("Gaming:")
+    allGaming = Gaming.query.all()
+    for _ in allGaming:
+        print(_)
+
+    print("\nNon Gaming:")
+    allNonGaming = NonGaming.query.all()
+    for _ in allNonGaming:
+        print(_)
+
+@app.cli.command("removeFromNG")
+def removeFromNG():
+    dng = NonGaming.query.filter_by(pId=1).first()
+    print(dng)
+    db.session.delete(dng)
+    db.session.commit()
+
+@app.cli.command("removeFromG")
+def removeFromG():
+    for id in range(2, 7, 2):
+        dg = Gaming.query.filter_by(pId=id).first()
+        if dg != None:
+            db.session.delete(dg)
     db.session.commit()

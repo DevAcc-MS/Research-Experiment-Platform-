@@ -17,12 +17,15 @@ def getId():
     while True:
         flag = True
         for tt in tmp:
+            ''' To remove below if condition when doing for passive condition only'''
+            if tt.pId % 2 == 0:
+                continue
             if tt.pId == Id:
                 flag = False
                 break
         if flag == True:
             break
-        Id = Id + 1
+        Id = Id + 2
     return Id
 
 @gaming_bp.route("/consentForm")
