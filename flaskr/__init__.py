@@ -59,14 +59,21 @@ def showAllData():
 @app.cli.command("removeFromNG")
 def removeFromNG():
     dng = NonGaming.query.filter_by(pId=1).first()
+    dng2 = NonGaming.query.filter_by(pId=3).first()
     print(dng)
     db.session.delete(dng)
+    db.session.delete(dng2)
     db.session.commit()
 
 @app.cli.command("removeFromG")
 def removeFromG():
-    for id in range(2, 7, 2):
-        dg = Gaming.query.filter_by(pId=id).first()
-        if dg != None:
-            db.session.delete(dg)
+    # for id in range(2, 7, 2):
+    #     dg = Gaming.query.filter_by(pId=id).first()
+    #     if dg != None:
+    #         db.session.delete(dg)
+    ng = Gaming.query.filter_by(pId=7).first()
+    ng2 = Gaming.query.filter_by(pId=9).first()
+
+    db.session.delete(ng)
+    db.session.delete(ng2)
     db.session.commit()
